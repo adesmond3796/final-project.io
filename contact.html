@@ -6,7 +6,7 @@
     <title>Contact</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/contact-styles.css">
 </head>
 
@@ -15,14 +15,39 @@
 <!-- Site Navigation -->    
 <header>
     <nav id="navigation-bar">
-        <img class="logo" width="300px" src="img/logo-3.png" alt="cedar house logo">
+        <img class="logo" width="300px" src="img/logo.png" alt="cedar house logo">
         <ul>
+            <li class="navli"><a href="/index.html">Home</a></li>
             <li class="navli"><a href="/about.html">About</a></li>
-            <li class="navli"><a href="/events.html">Events</a></li>
             <li class="navli"><a href="/contact.html">Contact</a></li>
         </ul>  
     </nav>
 </header>
+
+<div class="background-img" alt="woman browsing clothing rack">
+    <img width="1920" src="img/clothes.jpg" alt="clothing rack">
+</div>
+
+<div class="contact-form">
+    <form method="post" name="contact us" data-netlify="true">
+        <h2>Contact Us</h2>
+        <div>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name" required>
+        </div>
+
+        <div>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Your email" required>
+        </div>    
+
+        <div>
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Your message" required></textarea>
+        </div>
+        <button type="submit">Send Message</button>
+    </form>
+</div>
 
 <footer> 
     &copy;Alissa<br>

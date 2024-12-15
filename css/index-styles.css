@@ -1,22 +1,23 @@
 /* Font Styles 
 
-.inter-font-family> {
+.inter-font-family {
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
 }
 
-.inter-font-family> {
+.inter-font-family {
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: italic;
 }
 
-.alice-regular {
-  font-family: "Alice", serif;
-  font-weight: 400;
+.source-serif-4-font-family {
+  font-family: "Source Serif 4", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
   font-style: normal;
 }
 
@@ -32,12 +33,12 @@
 /* Variables */
 
 :root {
-    --theme-color-one: #57675C;
-    --theme-color-two: #e1d7cd;
-    --theme-color-three: #6B2A26;
-    --theme-color-four: #F2B56B;
-    --theme-color-five: #8C3D0F;
-    --page-animations: fadeIn 3s;
+  --theme-color-one: #D95F18;
+  --theme-color-two: #e1d7cd;
+  --theme-color-three: #D94343;
+  --theme-color-four: #5632D9;
+  --theme-color-five: #40311E;
+  --page-animations: fadeIn 3s;
 }
 
 html {
@@ -50,14 +51,14 @@ html {
 /* Main Styles */
 
 html {
-  font-family: 'Inter';
+  font-family: 'source serif 4';
   font-size: 1rem;
   font-weight: 300;
   color: var(--theme-color-three);
 } 
 
 h1, h2, h3 {
-  font-family: Alice;
+  font-family: 'Inter';
 }
 
 h1 {
@@ -80,31 +81,27 @@ h3 {
   height: 800px;
   overflow: hidden;
   background-size: contain;
-  background-color: black;
+  background-color: var(--theme-color-three);
   background-position: center;
   background-repeat: no-repeat;
   animation: fadeIn 3s;
 }
 
-.shop-banner img{
-  opacity: .6;
-}
-
 .centered {
-  font-family: alice;
-  font-size: 55px;
-  font-weight: bold;
+  font-family: 'inter';
+  font-size: 50px;
   text-align: center;
   color: white;
   position: absolute;
   top: 50%;
   left: 50%;
+  text-transform: uppercase;
   transform: translate(-50%, -50%);
   animation: var(--page-animations);
 }
 
 .sub-heading-1 {
-  font-family: inter;
+  font-family: 'source serif 4';
   font-size: 25px;
   text-align: center;
   color: white;
@@ -112,6 +109,7 @@ h3 {
   top: 52%;
   left: 50%;
   transform: translate(-50%, -50%);
+  text-transform: uppercase;
   animation: var(--page-animations);
 
 }
@@ -124,8 +122,8 @@ h3 {
 }
 
 .brand-story-description {
-  font-family: inter;
-  margin-right: 300px;
+  margin-right: 30px;
+  padding: 30px;
   font-size: var(--size-one);
   text-align: left;
   display: flex;
@@ -133,10 +131,11 @@ h3 {
 }
 
 .brand-story img {
+  display: block;
   width: 400px;
   height: 400px;
-  padding: 30px;
-  margin-left: 300px;
+  margin-left: 125px;
+  background-color: var(--theme-color-three);
   object-fit: cover;
   animation: var(--page-animations);
 }
@@ -145,9 +144,9 @@ h3 {
 
 .about-button {
   position: absolute;
-  left: 1100px;
-  top: 1300px;
-  background-color: var(--theme-color-one);
+  left: 255px;
+  top: 1255px;
+  background-color: var(--theme-color-four);
   color: white;
   padding: 20px 30px;
   border: none;
@@ -156,7 +155,7 @@ h3 {
 }
 
 .about-button:hover {
-  background-color: var(--theme-color-four);
+  background-color: var(--theme-color-three);
   color: white;
   text-transform: uppercase;
   text-decoration: none;
@@ -184,16 +183,19 @@ a {
 .shop-gallery .item-1 { 
   grid-column: 1 / 2;
   grid-row: 1 / span 2; 
+  background-color: var(--theme-color-three);
 }
 
 .shop-gallery .item-2 { 
   grid-column: 2 / 2;
   grid-row: 1 / 2; 
+  background-color: var(--theme-color-three);
 }
 
 .shop-gallery .item-3 { 
   grid-column: 2 / 2;
   grid-row: 2 / 2;
+  background-color: var(--theme-color-three);
 }
 
 .shop-gallery .item-1 img {
@@ -262,7 +264,7 @@ nav a:active {
 
 footer {
   position: relative;
-  margin: 150px;
+  margin: 30px;
   background-color: white;
   display: flex;
   flex-direction: row;

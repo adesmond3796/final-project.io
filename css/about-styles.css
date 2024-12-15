@@ -1,22 +1,23 @@
 /* Font Styles 
 
-.inter-font-family> {
+.inter-font-family {
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
 }
 
-.inter-font-family> {
+.inter-font-family {
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: italic;
 }
 
-.alice-regular {
-  font-family: "Alice", serif;
-  font-weight: 400;
+.source-serif-4-font-family {
+  font-family: "Source Serif 4", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
   font-style: normal;
 }
 
@@ -32,32 +33,32 @@
 /* Variables */
 
 :root {
-  --theme-color-one: #57675C;
-  --theme-color-two: #e1d7cd;
-  --theme-color-three: #6B2A26;
-  --theme-color-four: #F2B56B;
-  --theme-color-five: #8C3D0F;
-  --page-animations: fadeIn 3s;
+    --theme-color-one: #D95F18;
+    --theme-color-two: #e1d7cd;
+    --theme-color-three: #D94343;
+    --theme-color-four: #5632D9;
+    --theme-color-five: #40311E;
+    --page-animations: fadeIn 3s;
 }
 
 html {
---ratio: 		1.5;
---size-one: 	calc( 1rem * var(--ratio) );
---size-two: 	calc( var(--size-one) * var(--ratio) );
---size-three: 	calc( var(--size-two) * var(--ratio) );
+  --ratio: 		1.5;
+  --size-one: 	calc( 1rem * var(--ratio) );
+  --size-two: 	calc( var(--size-one) * var(--ratio) );
+  --size-three: 	calc( var(--size-two) * var(--ratio) );
 }
 
 /* Main Styles */
 
 html {
-  font-family: 'Inter';
+  font-family: 'source serif 4';
   font-size: 1rem;
   font-weight: 300;
   color: var(--theme-color-three);
 } 
 
 h1, h2, h3 {
-  font-family: Alice;
+  font-family: 'Inter';
 }
 
 h1 {
@@ -113,4 +114,144 @@ nav a:active {
   color: var(--theme-color-four);
   text-decoration: underline;
   transition: all .5s ease;
+}
+
+/* About Grid Styles */
+
+.parent {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  aspect-ratio: 16/9;
+}
+
+  
+  .div1 { 
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    grid-area: 1 / 1 / 2 / 2; 
+  }
+
+  .div2 { 
+    grid-area: 1 / 2 / 2 / 3; 
+  }
+
+  .div3 {
+    grid-area: 1 / 3 / 2 / 4; 
+  }
+
+  .div4 { 
+    grid-area: 2 / 1 / 3 / 2; 
+  }
+
+  .div5 { 
+    grid-area: 2 / 2 / 3 / 3; 
+  }
+
+  .div6 { 
+    grid-area: 2 / 3 / 3 / 4; 
+  }
+
+  .div1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .div2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .div3 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .div4 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .div5 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .div6 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+
+/* About Section */
+
+.centered {
+  background-color: #D94343;
+  padding-left: 250px;
+  padding-right: 250px;
+  font-family: 'source serif 4';
+  font-size: 45px;
+  text-align: center;
+  color: white;
+  position: absolute;
+  top: 89.5%;
+  left: 50%;
+  text-transform: uppercase;
+  transform: translate(-50%, -50%);
+  animation: var(--page-animations);
+}
+
+.sub-heading-1 {
+  background-color: white;
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-family: 'source serif 4';
+  font-size: 25px;
+  text-align: center;
+  color: var(--theme-color-three);
+  position: absolute;
+  top: 110%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: var(--page-animations);
+}
+
+/* Footer Styles */
+
+footer {
+  position: relative;
+  margin: 150px;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+footer ul{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+footer li {
+  text-decoration: none;
+  list-style-type: none;
+  font-family: inter;
+  text-transform: uppercase;
+  align-items: center;
+  font-size: 16px;
+  padding: 5px 15px;
+  opacity: 0.7;
 }
