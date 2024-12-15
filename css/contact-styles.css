@@ -1,0 +1,116 @@
+/* Font Styles 
+
+.inter-font-family> {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.inter-font-family> {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.alice-regular {
+  font-family: "Alice", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+*/
+
+/* Page Animations */
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  /* Variables */
+  
+  :root {
+    --theme-color-one: #57675C;
+    --theme-color-two: #e1d7cd;
+    --theme-color-three: #6B2A26;
+    --theme-color-four: #F2B56B;
+    --theme-color-five: #8C3D0F;
+    --page-animations: fadeIn 3s;
+  }
+  
+  html {
+  --ratio: 		1.5;
+  --size-one: 	calc( 1rem * var(--ratio) );
+  --size-two: 	calc( var(--size-one) * var(--ratio) );
+  --size-three: 	calc( var(--size-two) * var(--ratio) );
+  }
+  
+  /* Main Styles */
+  
+  html {
+    font-family: 'Inter';
+    font-size: 1rem;
+    font-weight: 300;
+    color: var(--theme-color-three);
+  } 
+  
+  h1, h2, h3 {
+    font-family: Alice;
+  }
+  
+  h1 {
+    font-size: var(--size-three);
+    color: var(--theme-color-three);
+  }
+  
+  h2 {
+    font-size: var(--size-two);
+    color: var(--theme-color-three);
+  }
+  
+  h3 {
+    font-size: var(--size-one);
+    color: var(--theme-color-three);
+  }
+  
+  /* Navigation Styles */
+  
+  #navigation-bar {
+    position: relative;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  nav ul {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+  }
+  
+  nav a {
+    color: var(--theme-color-three);
+    text-decoration: none;
+    font-family: inter;
+    text-transform: uppercase;
+    font-size: 16px;
+    padding: 5px 15px;
+    opacity: 0.7;
+  }
+  
+  nav li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 30px;
+  }
+  
+  nav a:hover, 
+  nav a:active {
+    color: var(--theme-color-four);
+    text-decoration: underline;
+    transition: all .5s ease;
+  }
